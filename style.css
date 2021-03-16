@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  /* position: fixed; */
+  width: 100%;
+  height: 5%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Monoton', cursive;
+  font-size: 1.5rem;
+  color: rgb(187 187 199);
+  background: #2b2b2b;
+  border-bottom: 1.3px solid rgba(0, 0, 0, 0.37);
+}
+
+.container {
+  width: 100%;
+  height: 95%;
+  display: flex;
+}
+
+.container div {
+  height: 100%;
+  display: flex;
+  align-items:flex-end;
+  justify-content: center;
+  width: 12.5%;
+  transition: .5s;
+}
+
+.container div:hover {
+  width: 100%;
+}
+
+.container div a {
+  width: 100%;
+  text-align: center;
+  background: #00000091;
+  color: rgb(173, 167, 167);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin-bottom: 3rem;
+}
+
+.div1 {
+  background: url(/images/pexels-francesco-ungaro-1525041.jpg);
+  background-size: cover;
+}
+
+.div2 {
+  background: url(/images/pexels-nicole-avagliano-2749481.jpg);
+  background-size: cover;
+}
+
+.div3 {
+  background: url(/images/pexels-kenneth-carpina-2468773.jpg);
+  background-size: cover;
+}
+
+
+.div4 {
+  background: url(/images/pexels-mark-plötz-2790395.jpg);
+  background-size: cover;
+}
+
+.div5 {
+  background: url(/images/pexels-simon-berger-1183099.jpg);
+  background-size: cover;
+}
+
+.div6 {
+  background: url(/images/pexels-mohamed-almari-1485894.jpg);
+  background-size: cover;
+}
+
+.div7 {
+  background: url(/images/pexels-arshad-sutar-1749303.jpg);
+  background-size: cover;
+}
+
+.div8 {
+  background: url(/images/pexels-eberhard-grossgasteiger-1612351.jpg);
+  background-size: cover;
+}
+
