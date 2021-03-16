@@ -116,13 +116,20 @@ footer {
 
 
 @media(max-width:700px){
+  header{
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
   .container {
-    /* height: 100vh; */
+    height: 100vh;
     display: flex;
     justify-content: space-between;
-    padding: 2rem 2rem 0 2rem;
+    align-items: flex-end;
+    padding: 4.2rem 2rem 0 2rem;
     flex-wrap: wrap;
-    /* overflow:auto; */
+    overflow:auto;
   }
 
   .container div {
