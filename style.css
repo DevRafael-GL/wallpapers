@@ -7,6 +7,11 @@
 body {
   width: 100%;
   height: 100vh;
+  /* background: #2b2b2b; */
+}
+
+.mobile {
+  display: none;
 }
 
 header {
@@ -29,6 +34,8 @@ header {
   width: 100%;
   height: 95%;
   display: flex;
+  background: #3f3f3f;
+  padding: 10rem;
 }
 
 .container div {
@@ -55,44 +62,80 @@ header {
   margin-bottom: 3rem;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.3rem;
+  color: rgba(173, 167, 167, 0.411);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 .div1 {
-  background: url(/images/pexels-francesco-ungaro-1525041.jpg);
+  background: url(/images/pexels-francesco-ungaro-1525041\ \(3\).jpg);
   background-size: cover;
 }
 
 .div2 {
-  background: url(/images/pexels-nicole-avagliano-2749481.jpg);
+  background: url(/images/pexels-nicole-avagliano-2749481\ \(1\).jpg);
   background-size: cover;
 }
 
 .div3 {
-  background: url(/images/pexels-kenneth-carpina-2468773.jpg);
+  background: url(/images/pexels-kenneth-carpina-2468773\ \(1\).jpg);
   background-size: cover;
 }
 
 
 .div4 {
-  background: url(/images/pexels-mark-plötz-2790395.jpg);
+  background: url(/images/pexels-mark-plötz-2790395\ \(1\).jpg);
   background-size: cover;
 }
 
 .div5 {
-  background: url(/images/pexels-simon-berger-1183099.jpg);
+  background: url(/images/pexels-simon-berger-1183099\ \(1\).jpg);
   background-size: cover;
 }
 
 .div6 {
-  background: url(/images/pexels-mohamed-almari-1485894.jpg);
+  background: url(/images/pexels-mohamed-almari-1485894\ \(1\).jpg);
   background-size: cover;
 }
 
 .div7 {
-  background: url(/images/pexels-arshad-sutar-1749303.jpg);
+  background: url(/images/pexels-arshad-sutar-1749303\ \(1\).jpg);
   background-size: cover;
 }
 
 .div8 {
-  background: url(/images/pexels-eberhard-grossgasteiger-1612351.jpg);
+  background: url(/images/pexels-eberhard-grossgasteiger-1612351\ \(1\).jpg);
   background-size: cover;
 }
 
+
+@media(max-width:700px){
+  .container {
+    /* height: 100vh; */
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 2rem 0 2rem;
+    flex-wrap: wrap;
+    /* overflow:auto; */
+  }
+
+  .container div {
+    display: block;
+    width: 45%;
+    height: 45%;
+    margin-bottom: 1.6rem;
+  }
+
+  .container div:hover {
+    zoom: 1;
+  }
+  footer {
+    display: none;
+  }
+}
