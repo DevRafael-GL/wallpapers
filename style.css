@@ -34,17 +34,19 @@ header {
   border-bottom: 1.3px solid rgba(0, 0, 0, 0.37);
 }
 
+/* >>>>>>> CONTAINER <<<<<<< */
+
 .container {
   width: 100%;
   height: 95%;
 }
 
-.mode-mobile {
+.container div.active {
+  position: absolute;
+  top: 14rem;
+  left: 0;
   width: 100%;
-  height: 100%;
-  display: flex;
-  background: #3f3f3f;
-  padding: 10rem;
+  height: 60%;
 }
 
 .container div {
@@ -75,6 +77,8 @@ header {
   display: none;
 }
 
+/* >>>>>>> FOOTER <<<<<<< */
+
 footer {
   position: fixed;
   bottom: 0;
@@ -85,6 +89,9 @@ footer {
   color: rgba(173, 167, 167, 0.411);
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
+
+/* >>>>>>> IMAGES <<<<<<< */
 
 .div1 {
   background: url(/images/pexels-francesco-ungaro-1525041\ \(3\).jpg);
@@ -130,30 +137,33 @@ footer {
 
 
 
-.container div.active {
-  position: absolute;
-  top: 14rem;
-  left: 0;
-  width: 100%;
-  height: 60%;
-}
 
+
+
+/* >>>>>>> MODAL <<<<<<< */
 .modal-img {
   position: fixed;
+  z-index: 2;
   height: 100vh;
   width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #151515;
   visibility: hidden;
 }
 
 .modal-content {
-  height: 100vh;
+  position: relative;
+  width: auto;
+  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .modal-img img {
+  
   width: 100vh;
 }
 
@@ -173,12 +183,32 @@ footer {
   visibility: visible;
 }
 
+.mode-mobile {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #3f3f3f;
+  padding: 10rem;
+}
+
+#download {
+  padding: 0 1rem;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.726);
+  text-decoration: none;
+  font-size: 2.8rem;
+}
+
 
 
 @media(max-width:1200px){
   body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   header{
@@ -200,11 +230,19 @@ footer {
     grid-template-columns: repeat(8,1fr);
     padding: 0;
     align-items: center;
-    margin: 20% auto 0;
+    margin: 0 auto 0;
     gap: 1rem;
     background: transparent;
     /* flex-wrap: wrap; */
     overflow: auto;
+  }
+
+  #download {
+    right: 0;
+  }
+
+  .modal-content {
+    width: auto;
   }
 
   .container div {
@@ -215,7 +253,7 @@ footer {
   }
 
   .container div:hover {
-    width: 10rem;
+    width: 8rem;
   }
 
   .arrow-right {
@@ -227,14 +265,19 @@ footer {
   
   .arrow-right span{
     position: absolute;
+    z-index: 1;
     right: 15px;
     top: 0;
   }
 }
 
 @media(max-width:950px){
-  .modal-img img {
+  .modal-content {
     width: 90%;
+  }
+
+  .modal-img img {
+    width: 100%;
   }  
 }
 
@@ -242,14 +285,21 @@ footer {
   .modal-img img {
     width: 100%;
   }  
+
+  .container div{
+    height: 13rem;
+  }
 }
 
-@media(max-height:450px) and (max-width:1200px) {
+@media(max-width:350px){
+  #download {
+    font-size: 2.4rem;
+  }
+}
+
+@media(max-height:450px) {
   .container div {
     height: 14rem;
-  }
-  .mode-mobile {
-    margin-top: 20%;
   }
 }
 
@@ -264,20 +314,7 @@ footer {
   }
 
   .mode-mobile {
-    margin-top: 15%;
-  }
-}
-
-@media(max-height:350px) {
-  
-
-  .container div{
-    /* width: 5.7rem; */
-    height: 10rem;
-  }
-
-  .container div a {
-    font-size: 1rem;
+    margin-top: 2rem;
   }
 }
 
